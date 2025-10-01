@@ -1,0 +1,50 @@
+﻿@model GetTestimonialByIdDto
+
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-success text-white text-center">
+            <h4 class="mb-0">Yeni Referans Ekle</h4>
+        </div>
+        <div class="card-body p-4">
+            <form method="post">
+
+                <input type="hidden" asp-for="TestimonialId"/>
+
+                <div class="mb-3">
+                    <label asp-for="TestimonialName" class="form-label">Referans adı</label>
+                    <input type="text" asp-for="TestimonialName" class="form-control" placeholder="Referans adını giriniz" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="TestimonialSurname" class="form-label">Açıklama</label>
+                    <textarea asp-for="TestimonialSurname" class="form-control" rows="3" placeholder="Referans soyadını giriniz"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Comment" class="form-label">Resim URL</label>
+                    <input type="text" asp-for="Comment" class="form-control" placeholder="Yorum" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="City" class="form-label">Fiyat</label>
+                    <input type="number" asp-for="City" class="form-control" placeholder="Şehir" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Country" class="form-label">Gün / Gece</label>
+                    <input type="text" asp-for="Country" class="form-control" placeholder="Ülke" />
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success btn-lg">Referansı Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

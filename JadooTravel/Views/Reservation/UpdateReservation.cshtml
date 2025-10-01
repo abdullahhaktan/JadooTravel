@@ -1,0 +1,50 @@
+﻿@model GetReservationByIdDto
+
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-primary text-white text-center">
+            <h4 class="mb-0">Rezervasyonu Güncelle</h4>
+        </div>
+        <div class="card-body p-4">
+            <form method="post">
+
+                <input type="hidden" asp-for="ReservationId" />
+
+                <div class="mb-3">
+                    <label asp-for="NameSurname" class="form-label">Ad Soyad</label>
+                    <input type="text" asp-for="NameSurname" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label">E-Mail</label>
+                    <input type="email" asp-for="Email" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PhoneNumber" class="form-label">Telefon Numarası</label>
+                    <input type="tel" asp-for="PhoneNumber" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="TurCityCountry" class="form-label">Tur / Şehir / Ülke</label>
+                    <input type="text" asp-for="TurCityCountry" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="InOrderToYourRequests" class="form-label">Özel Talepleriniz</label>
+                    <textarea asp-for="InOrderToYourRequests" class="form-control" rows="3"></textarea>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">Rezervasyonu Güncelle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

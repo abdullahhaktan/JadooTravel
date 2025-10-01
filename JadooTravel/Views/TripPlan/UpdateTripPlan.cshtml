@@ -1,0 +1,42 @@
+﻿@model GetTripPlanByIdDto
+
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-success text-white text-center">
+            <h4 class="mb-0">Yeni Rezervasyon Planı Ekle</h4>
+        </div>
+        <div class="card-body p-4">
+            <form method="post">
+                
+                <input type="hidden" asp-for="TripPlanId" />
+
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label">Başlık</label>
+                    <input type="text" asp-for="Title" class="form-control" placeholder="Başlık" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label">Açıklama</label>
+                    <textarea asp-for="Description" class="form-control" rows="3" placeholder="Açıklama giriniz"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="IconUrl" class="form-label">Icon URL</label>
+                    <input type="text" asp-for="IconUrl" class="form-control" placeholder="ikon url" />
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success btn-lg">Rezervasyon planı Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

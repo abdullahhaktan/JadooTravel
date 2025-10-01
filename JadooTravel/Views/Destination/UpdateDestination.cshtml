@@ -1,0 +1,54 @@
+﻿@model GetDestinationByIdDto
+
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-primary text-white text-center">
+            <h4 class="mb-0">Tur Bilgilerini Güncelle</h4>
+        </div>
+        <div class="card-body p-4">
+            <form method="post">
+                <input type="hidden" asp-for="DestinationId" />
+
+                <div class="mb-3">
+                    <label asp-for="CityCountry" class="form-label">Şehir ve Ülke</label>
+                    <input type="text" asp-for="CityCountry" class="form-control" placeholder="Şehir ve ülke giriniz" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label">Açıklama</label>
+                    <textarea asp-for="Description" class="form-control" rows="3" placeholder="Açıklama giriniz"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ImageUrl" class="form-label">Resim URL</label>
+                    <input type="text" asp-for="ImageUrl" class="form-control" placeholder="Resim url giriniz" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Price" class="form-label">Fiyat</label>
+                    <input type="number" asp-for="Price" class="form-control" placeholder="Fiyat giriniz" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DayNight" class="form-label">Gün / Gece</label>
+                    <input type="text" asp-for="DayNight" class="form-control" placeholder="Gün-Gece sayısı" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Capacity" class="form-label">Kapasite</label>
+                    <input type="number" asp-for="Capacity" class="form-control" placeholder="Kapasite giriniz" />
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">Turu Güncelle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

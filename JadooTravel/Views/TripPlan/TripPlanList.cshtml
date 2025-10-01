@@ -1,0 +1,53 @@
+﻿@model List<ResultTripPlanDto>
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-success text-white text-center">
+            <h4 class="mb-0">Tur Listesi</h4>
+        </div>
+        <div class="card-body p-4">
+            <table class="table table-hover align-middle text-center">
+                <thead class="table-success">
+                    <tr>
+                        <th>#</th>
+                        <th>Başlık</th>
+                        <th>Açıklama</th>
+                        <th>İkon Url</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.TripPlanId</td>
+                            <td>@item.Title</td>
+                            <td>@item.Description</td>
+                            <td>@item.IconUrl</td>
+                            <td>
+                                <a href="/TripPlan/DeleteTripPlan/@item.TripPlanId"
+                                   class="btn btn-sm btn-danger rounded-pill px-3">Sil</a>
+                            </td>
+                            <td>
+                                <a href="/TripPlan/UpdateTripPlan/@item.TripPlanId"
+                                   class="btn btn-sm btn-primary rounded-pill px-3">Güncelle</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <div class="d-flex justify-content-end mt-3">
+                <a href="/TripPlan/CreateTripPlan" class="btn btn-success btn-lg rounded-pill px-4">
+                    + Yeni Tatil Planı Ekle
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

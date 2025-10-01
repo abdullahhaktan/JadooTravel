@@ -1,0 +1,48 @@
+﻿@using JadooTravel.Dtos.CategoryDtos
+@model CreateReservationDto
+
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-success text-white text-center">
+            <h4 class="mb-0">Yeni Rezervasyon Ekle</h4>
+        </div>
+        <div class="card-body p-4">
+            <form method="post">
+                <div class="mb-3">
+                    <label asp-for="NameSurname" class="form-label">Ad Soyad</label>
+                    <input type="text" asp-for="NameSurname" class="form-control" placeholder="Adınızı ve soyadınızı giriniz" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label">E-Mail</label>
+                    <input type="email" asp-for="Email" class="form-control" placeholder="ornek@mail.com" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PhoneNumber" class="form-label">Telefon Numarası</label>
+                    <input type="tel" asp-for="PhoneNumber" class="form-control" placeholder="(5xx) xxx xx xx" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="TurCityCountry" class="form-label">Tur / Şehir / Ülke</label>
+                    <input type="text" asp-for="TurCityCountry" class="form-control" placeholder="Örn: İstanbul, Türkiye" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="InOrderToYourRequests" class="form-label">Özel Talepleriniz</label>
+                    <textarea asp-for="InOrderToYourRequests" class="form-control" rows="3" placeholder="Varsa özel taleplerinizi yazın"></textarea>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success btn-lg">Rezervasyonu Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

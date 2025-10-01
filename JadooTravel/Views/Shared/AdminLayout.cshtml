@@ -1,0 +1,179 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spike Free Bootstrap Admin Template by WrapPixel</title>
+    <link rel="shortcut icon" type="image/png" href="/Spike-Bootstrap-1.0.0/src/assets/images/logos/favicon.png" />
+    <link rel="stylesheet" href="/Spike-Bootstrap-1.0.0/src/assets/css/styles.min.css" />
+</head>
+
+<body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+         data-sidebar-position="fixed" data-header-position="fixed">
+
+        <!--  App Topstrip -->
+        <!--  App Topstrip -->
+        <div class="app-topstrip bg-dark py-6 px-3 w-100 d-lg-flex align-items-center justify-content-between">
+
+            <!-- Sol taraf: WrapPixel logo -->
+            <div class="d-flex align-items-center justify-content-center">
+                <a class="d-flex justify-content-center" href="https://www.wrappixel.com/" target="_blank">
+                    <img src="/Spike-Bootstrap-1.0.0/src/assets/images/logos/logo-wrappixel.svg" alt="WrapPixel" width="150">
+                </a>
+            </div>
+
+            <!-- Sağ taraf: Logout ve Profil ikonları -->
+            <div class="d-flex align-items-center gap-3">
+                <!-- Logout icon -->
+                <a href="/Account/Logout"
+                   class="text-white d-flex align-items-center justify-content-center"
+                   style="font-size: 2.5rem; width: 50px; height: 50px; background-color: rgba(255,255,255,0.1); border-radius: 50%;">
+                    <iconify-icon icon="solar:logout-2-line-duotone"></iconify-icon>
+                </a>
+                <!-- Profile icon -->
+                <a href="/Account/Profile"
+                   class="text-white d-flex align-items-center justify-content-center"
+                   style="font-size: 2.5rem; width: 50px; height: 50px; background-color: rgba(255,255,255,0.1); border-radius: 50%;">
+                    <iconify-icon icon="solar:user-circle-line-duotone"></iconify-icon>
+                </a>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Sidebar Start -->
+        <aside class="left-sidebar" style="margin-top:0px">
+            <!-- Sidebar scroll-->
+            <div>
+                <div class="brand-logo d-flex align-items-center justify-content-between">
+                    <a href="./index.html" class="text-nowrap logo-img">
+                        <img src="/Spike-Bootstrap-1.0.0/src/assets/images/logos/logo.svg" alt="" />
+                    </a>
+                    <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                        <i class="ti ti-x fs-8"></i>
+                    </div>
+                </div>
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+                    <ul id="sidebarnav">
+                        <li class="nav-small-cap">
+                            <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-4"></iconify-icon>
+                            <span class="hide-menu">Travel Admin</span>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link primary-hover-bg" href="/Dashboard/Index" aria-expanded="false">
+                                <iconify-icon icon="solar:pie-chart-2-line-duotone"></iconify-icon>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link primary-hover-bg justify-content-between"
+                               href="/Category/CategoryList" aria-expanded="false">
+                                <div class="d-flex align-items-center gap-6">
+                                    <span class="d-flex">
+                                        <iconify-icon icon="solar:widget-2-line-duotone"></iconify-icon>
+                                    </span>
+                                    <span class="hide-menu">Kategoriler</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link primary-hover-bg justify-content-between"
+                               href="/Destination/DestinationList" aria-expanded="false">
+                                <div class="d-flex align-items-center gap-6">
+                                    <span class="d-flex">
+                                        <iconify-icon icon="solar:map-point-wave-line-duotone"></iconify-icon>
+                                    </span>
+                                    <span class="hide-menu">Rotalar</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link primary-hover-bg justify-content-between"
+                               href="/Feature/UpdateFeature" aria-expanded="false">
+                                <div class="d-flex align-items-center gap-6">
+                                    <span class="d-flex">
+                                        <iconify-icon icon="solar:star-circle-line-duotone"></iconify-icon>
+                                    </span>
+                                    <span class="hide-menu">Öne çıkan</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link primary-hover-bg justify-content-between"
+                               href="/Reservation/ReservationList" aria-expanded="false">
+                                <div class="d-flex align-items-center gap-6">
+                                    <span class="d-flex">
+                                        <iconify-icon icon="solar:document-line-duotone"></iconify-icon>
+                                    </span>
+                                    <span class="hide-menu">Rezervasyonlar</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link primary-hover-bg justify-content-between"
+                               href="/Category/CategoryList" aria-expanded="false">
+                                <div class="d-flex align-items-center gap-6">
+                                    <span class="d-flex">
+                                        <iconify-icon icon="solar:settings-line-duotone"></iconify-icon>
+                                    </span>
+                                    <span class="hide-menu">Hizmetler</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link primary-hover-bg justify-content-between"
+                               href="/Testimonial/TestimonialList" aria-expanded="false">
+                                <div class="d-flex align-items-center gap-6">
+                                    <span class="d-flex">
+                                        <iconify-icon icon="solar:users-group-two-rounded-line-duotone"></iconify-icon>
+                                    </span>
+                                    <span class="hide-menu">Referanslar</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link primary-hover-bg justify-content-between"
+                               href="/TripPlan/UpdateTripPlan" aria-expanded="false">
+                                <div class="d-flex align-items-center gap-6">
+                                    <span class="d-flex">
+                                        <iconify-icon icon="solar:route-line-duotone"></iconify-icon>
+                                    </span>
+                                    <span class="hide-menu">Rezervasyon adımları</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!--  Sidebar End -->
+        <!--  Main wrapper -->
+        <div class="body-wrapper">
+            <div class="body-wrapper-inner">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Spike-Bootstrap-1.0.0/src/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/Spike-Bootstrap-1.0.0/src/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Spike-Bootstrap-1.0.0/src/assets/js/sidebarmenu.js"></script>
+    <script src="/Spike-Bootstrap-1.0.0/src/assets/js/app.min.js"></script>
+    <script src="/Spike-Bootstrap-1.0.0/src/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="/Spike-Bootstrap-1.0.0/src/assets/libs/simplebar/dist/simplebar.js"></script>
+    <script src="/Spike-Bootstrap-1.0.0/src/assets/js/dashboard.js"></script>
+    <!-- solar icons -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</body>
+
+</html>

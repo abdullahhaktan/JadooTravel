@@ -1,0 +1,73 @@
+﻿<section class="pt-6">
+    <div class="container">
+        <div class="py-8 px-5 position-relative text-center" style="background-color: rgba(223, 215, 249, 0.199);border-radius: 129px 20px 20px 20px;">
+            <div class="position-absolute start-100 top-0 translate-middle ms-md-n3 ms-n4 mt-3">
+                <img src="~/public/assets/img/cta/send.png" style="max-width:70px;" alt="send icon" />
+            </div>
+            <div class="position-absolute end-0 top-0 z-index--1">
+                <img src="~/public/assets/img/cta/shape-bg2.png" width="264" alt="cta shape" />
+            </div>
+            <div class="position-absolute start-0 bottom-0 ms-3 z-index--1 d-none d-sm-block">
+                <img src="~/public/assets/img/cta/shape-bg1.png" style="max-width: 340px;" alt="cta shape" />
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <h2 class="text-secondary lh-1-7 mb-7">@_localization.Getkey("yerÖneri")</h2>
+
+                    <!-- Form -->
+                    <form asp-action="ShowSuggestions" method="post" class="row g-3 align-items-center w-lg-75 mx-auto">
+                        <div class="col-sm">
+                            <div class="input-group-icon">
+                                <input class="form-control form-little-squirrel-control" type="text" name="Location" placeholder="Şehir, Ülke giriniz" aria-label="location" />
+                                <img class="input-box-icon" src="~/public/assets/img/cta/mail.svg" width="17" alt="mail" />
+                            </div>
+                        </div>
+                        <div class="col-sm-auto">
+                            <button class="btn btn-danger orange-gradient-btn fs--1" type="submit">@_localization.Getkey("Göster")</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="suggestionModal" tabindex="-1" aria-labelledby="suggestionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-3 shadow">
+            <div class="modal-header">
+                <h5 class="modal-title" id="suggestionModalLabel">Önerilen Yerler</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body">
+                @if (ViewBag.Suggestions != null)
+                {
+                    var suggestions = ViewBag.Suggestions.ToString()
+                    .Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    <ul class="list-group">
+                        @foreach (var item in suggestions)
+                        {
+                            <li class="list-group-item">@item.TrimStart('-', ' ') </li>
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script doğrudan ekleniyor -->
+<script>
+    // Eğer backend'den Suggestion geldiyse modal aç
+    @if (ViewBag.Suggestions != null)
+    {
+        <text>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var myModal = new bootstrap.Modal(document.getElementById('suggestionModal'));
+                    myModal.show();
+                });
+        </text>
+    }
+</script>

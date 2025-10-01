@@ -1,0 +1,42 @@
+﻿@model CreateCategoryDto
+
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-success text-white text-center">
+            <h4 class="mb-0">Yeni Hizmet Ekle</h4>
+        </div>
+        <div class="card-body p-4">
+            <form method="post">
+                <div class="mb-3">
+                    <label asp-for="CategoryName" class="form-label">Kategori</label>
+                    <input type="text" asp-for="CategoryName" class="form-control" placeholder="Kategori" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label">Açıklama</label>
+                    <input type="text" asp-for="Description" class="form-control" placeholder="Açıklama" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="IconUrl" class="form-label">Icon Url</label>
+                    <input type="text" asp-for="IconUrl" class="form-control" placeholder="ikon url" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Status" class="form-label">Durum</label>
+                    <input type="text" asp-for="Status" class="form-control" placeholder="Durum" />
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success btn-lg">Kategoriyi Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

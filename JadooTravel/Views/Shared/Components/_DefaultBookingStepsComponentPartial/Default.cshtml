@@ -1,0 +1,88 @@
+﻿@model List<ResultTripPlanDto>
+
+<section id="booking">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="mb-4 text-start">
+                    <h5 class="text-secondary">@_localization.Getkey("Hızlı Rezervasyon").Value</h5>
+                    <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">@_localization.Getkey("3 Adımda Rezervsyon").Value</h3>
+                </div>
+                @foreach(var item in Model)
+                {
+                    <div class="d-flex align-items-start mb-5">
+                        <div class="bg-primary me-sm-4 me-3 p-3" style="border-radius: 13px"> <img src="@item.IconUrl" width="22" alt="steps" /></div>
+                        <div class="flex-1">
+                            <h5 class="text-secondary fw-bold fs-0">@item.Title</h5>
+                            <p>@item.Description</p>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-lg-6 d-flex justify-content-center align-items-start">
+                <form method="post" asp-action="CreateReservation" asp-controller="Reservation" class="w-100">
+                    <div class="mb-4">
+                        <label for="nameSurname" class="form-label fw-semibold text-dark">Adınız Soyadınız</label>
+                        <input type="text"
+                               class="form-control form-control-lg border-0 shadow-sm"
+                               id="nameSurname"
+                               name="NameSurname"
+                               placeholder="Adınız ve soyadınızı giriniz"
+                               style="background-color: #f8f9fa; padding: 12px 15px;"
+                               required />
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="phoneNumber" class="form-label fw-semibold text-dark">Telefon Numaranız</label>
+                        <input type="tel"
+                               class="form-control form-control-lg border-0 shadow-sm"
+                               id="phoneNumber"
+                               name="PhoneNumber"
+                               placeholder="5XX XXX XX XX"
+                               style="background-color: #f8f9fa; padding: 12px 15px;"
+                               required />
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="email" class="form-label fw-semibold text-dark">Email Adresiniz</label>
+                        <input type="email"
+                               class="form-control form-control-lg border-0 shadow-sm"
+                               id="email"
+                               name="Email"
+                               placeholder="ornek@email.com"
+                               style="background-color: #f8f9fa; padding: 12px 15px;"
+                               required />
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="turCityCountry" class="form-label fw-semibold text-dark">Tur Şehir/Ülke</label>
+                        <input type="text"
+                               class="form-control form-control-lg border-0 shadow-sm"
+                               id="turCityCountry"
+                               name="TurCityCountry"
+                               placeholder="İlgilendiğiniz tur bölgesi"
+                               style="background-color: #f8f9fa; padding: 12px 15px;" />
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="inOrderToYourRequests" class="form-label fw-semibold text-dark">Ek İstekleriniz</label>
+                        <textarea rows="4"
+                                  class="form-control form-control-lg border-0 shadow-sm"
+                                  id="inOrderToYourRequests"
+                                  name="InOrderToYourRequests"
+                                  placeholder="Varsa özel isteklerinizi belirtiniz..."
+                                  style="background-color: #f8f9fa; padding: 12px 15px; resize: vertical;"></textarea>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit"
+                                class="btn btn-primary btn-lg fw-semibold text-white border-0 py-3"
+                                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            Rezervasyon Oluştur
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div><!-- end of .container-->
+</section>

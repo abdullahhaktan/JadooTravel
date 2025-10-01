@@ -1,0 +1,55 @@
+﻿@model List<ResultTestimonialDto>
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-success text-white text-center">
+            <h4 class="mb-0">Hizmet Listesi</h4>
+        </div>
+        <div class="card-body p-4">
+            <table class="table table-hover align-middle text-center">
+                <thead class="table-success">
+                    <tr>
+                        <th>#</th>
+                        <th>Referans</th>
+                        <th>Yorum</th>
+                        <th>Şehir</th>
+                        <th>Ülke</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.TestimonialId</td>
+                            <td>@item.TestimonialName @item.TestimonialSurname</td>
+                            <td>@item.Comment</td>
+                            <td>@item.City</td>
+                            <td>@item.Country</td>
+                            <td>
+                                <a href="/Testimonial/DeleteTestimonial/@item.TestimonialId"
+                                   class="btn btn-sm btn-danger rounded-pill px-3">Sil</a>
+                            </td>
+                            <td>
+                                <a href="/Testimonial/UpdateTestimonial/@item.TestimonialId"
+                                   class="btn btn-sm btn-primary rounded-pill px-3">Güncelle</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <div class="d-flex justify-content-end mt-3">
+                <a href="/Testimonial/CreateTestimonial" class="btn btn-success btn-lg rounded-pill px-4">
+                    + Yeni Referans ekle
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

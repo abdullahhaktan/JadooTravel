@@ -1,0 +1,49 @@
+﻿@model UpdateFeatureDto
+
+@{
+    ViewData["Title"] = "UpdateFeature";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-success text-white text-center">
+            <h4 class="mb-0">Öne çıkanı güncelle</h4>
+        </div>
+        <div class="card-body p-4">
+            <form method="post">
+
+                <input type="hidden" asp-for="FeatureId" />
+
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label">başlık</label>
+                    <input type="text" asp-for="Title" class="form-control" placeholder="Başlık" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="MainTitle" class="form-label">Ana başlık</label>
+                    <input type="text" asp-for="MainTitle" class="form-control" placeholder="Ana başlık" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label">Açıklama</label>
+                    <input type="text" asp-for="Description" class="form-control" placeholder="Açıklama" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="VideoUrl" class="form-label">Video Url</label>
+                    <input type="text" asp-for="VideoUrl" class="form-control" placeholder="Video Url Giriniz" />
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success btn-lg">Öne çıkanı güncelle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
