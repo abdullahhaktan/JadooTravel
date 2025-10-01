@@ -1,3 +1,5 @@
+# [TR]
+
 # 🚀 Jadoo Travel Seyahat Projesi
 
 Bu proje; **AI entegrasyonu** ve **MongoDB veritabanı** üzerine inşa edilmiş, **Asp.Net Core** ile geliştirilmiş bir **Tatil Rezervasyon Uygulamasıdır**. 🌍✨  
@@ -20,7 +22,7 @@ Bu proje; **AI entegrasyonu** ve **MongoDB veritabanı** üzerine inşa edilmiş
 - Şehir ve ülke bazlı gezilecek yer önerileri 🗺️  
 - Admin paneli üzerinden tüm sistemin yönetimi 🛠️  
 
-
+# [EN]
 
 # 🚀 Jadoo Travel Project
 
