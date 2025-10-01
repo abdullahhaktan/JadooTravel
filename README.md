@@ -1,7 +1,5 @@
 # 🚀 Jadoo Travel Seyahat Projesi
 
-M&Y Akademi bünyesinde, değerli hocalarım **Erhan Gündüz** ve **Murat Yücedağ** rehberliğinde yürüttüğüm **3. projemi** paylaşmaktan mutluluk duyuyorum. 🎉  
-
 Bu proje; **AI entegrasyonu** ve **MongoDB veritabanı** üzerine inşa edilmiş, **Asp.Net Core** ile geliştirilmiş bir **Tatil Rezervasyon Uygulamasıdır**. 🌍✨  
 
 ---
@@ -21,6 +19,30 @@ Bu proje; **AI entegrasyonu** ve **MongoDB veritabanı** üzerine inşa edilmiş
 - Güncel tüm tur fırsatlarını görüntüleme 🏝️  
 - Şehir ve ülke bazlı gezilecek yer önerileri 🗺️  
 - Admin paneli üzerinden tüm sistemin yönetimi 🛠️  
+
+
+
+# 🚀 Jadoo Travel Project
+
+This project is a **Vacation Reservation Application** built with **Asp.Net Core**, powered by **AI integration** and a **MongoDB database**. 🌍✨  
+
+---
+
+## 🔧 Technical Features
+- Layered architecture (**Services, Controller, Model**)  
+- **ViewComponents** for a testable and sustainable structure  
+- **Dependency Injection** for loose coupling  
+- **Resource (.resx)** files providing **multi-language support** (🇹🇷 TR | 🇬🇧 EN | 🇪🇸 ES | 🇫🇷 FR)  
+- **DTO & AutoMapper** to prevent repetitive code  
+- **Public & Spike themes** separating admin and user interfaces  
+
+---
+
+## 👤 User Features
+- Easy and fast reservation process ✈️  
+- View all up-to-date tour opportunities 🏝️  
+- City- and country-based travel recommendations 🗺️  
+- Manage the entire system through the admin panel 🛠️  
 
 
 
