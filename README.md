@@ -77,5 +77,11 @@ This project is a **Vacation Reservation Application** built with **Asp.Net Core
 ---
 
 <img width="936" height="443" alt="Ekran görüntüsü 2025-10-01 070722" src="https://github.com/user-attachments/assets/de69a853-508f-4695-a861-0eff2857c8fc" />
+
+---
+
 <img width="938" height="357" alt="Ekran görüntüsü 2025-10-01 070659" src="https://github.com/user-attachments/assets/2a077a40-58f6-48e4-883c-fce89fa49199" />
+
+---
+
 <img width="615" height="442" alt="Ekran görüntüsü 2025-10-01 100411" src="https://github.com/user-attachments/assets/5721441b-f8d0-4850-81bf-5af89549a9e2" />
