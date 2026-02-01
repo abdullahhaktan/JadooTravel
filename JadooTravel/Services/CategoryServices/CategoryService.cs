@@ -42,7 +42,6 @@ namespace JadooTravel.Services.CategoryServices
             return _mapper.Map<GetCategoryByIdDto>(value);
         }
 
-
         public async Task UpdateCategoryAsync(UpdateCategoryDto updateCategoryDto)
         {
             var value = _mapper.Map<Category>(updateCategoryDto);
