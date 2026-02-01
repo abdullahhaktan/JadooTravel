@@ -1,5 +1,4 @@
 ﻿using JadooTravel.Dtos.ReservationDtos;
-using JadooTravel.Dtos.CategoryDtos;
 
 namespace JadooTravel.Services.ReservationServices
 {

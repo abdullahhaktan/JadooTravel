@@ -3,7 +3,6 @@ using JadooTravel.Dtos.CategoryDtos;
 using JadooTravel.Dtos.DestinationDtos;
 using JadooTravel.Dtos.FeatureDtos;
 using JadooTravel.Dtos.ReservationDtos;
-using JadooTravel.Dtos.CategoryDtos;
 using JadooTravel.Dtos.TestimonialDtos;
 using JadooTravel.Dtos.TripPlansDtos;
 using JadooTravel.Entities;

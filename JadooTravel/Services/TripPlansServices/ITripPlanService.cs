@@ -1,5 +1,4 @@
-﻿using JadooTravel.Dtos.DestinationDtos;
-using JadooTravel.Dtos.TripPlansDtos;
+﻿using JadooTravel.Dtos.TripPlansDtos;
 
 namespace JadooTravel.Services.TripPlanServices
 {

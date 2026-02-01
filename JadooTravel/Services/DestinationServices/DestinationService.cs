@@ -45,7 +45,7 @@ namespace JadooTravel.Services.DestinationServices
 
         public async Task<List<ResultDestinationDto>> GetLast5DestinationAsync()
         {
-            var values = await _destinationCollection.Find(d => true).SortByDescending(d=>d.DestinationId).Limit(5).ToListAsync();
+            var values = await _destinationCollection.Find(d => true).SortByDescending(d => d.DestinationId).Limit(5).ToListAsync();
             return _mapper.Map<List<ResultDestinationDto>>(values);
         }
 

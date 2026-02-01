@@ -1,11 +1,9 @@
-﻿using JadooTravel.Entities;
-using JadooTravel.Services.CategoryServices;
+﻿using JadooTravel.Services.CategoryServices;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Driver;
 
 namespace JadooTravel.ViewComponents
 {
-    public class _DefaultCategoryComponentPartial:ViewComponent
+    public class _DefaultCategoryComponentPartial : ViewComponent
     {
         private readonly ICategoryService _catgoryservice;
 

@@ -1,5 +1,4 @@
 ﻿using JadooTravel.Dtos.CategoryDtos;
-using JadooTravel.Entities;
 
 namespace JadooTravel.Services.CategoryServices
 {

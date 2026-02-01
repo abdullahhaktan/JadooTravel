@@ -38,7 +38,7 @@ namespace JadooTravel.Services.CategoryServices
 
         public async Task<GetCategoryByIdDto> GetCategoryByIdAsync(string id)
         {
-            var value =await _categoryCollection.Find(c=>c.CategoryId == id).FirstOrDefaultAsync();
+            var value = await _categoryCollection.Find(c => c.CategoryId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetCategoryByIdDto>(value);
         }
 
@@ -46,7 +46,7 @@ namespace JadooTravel.Services.CategoryServices
         public async Task UpdateCategoryAsync(UpdateCategoryDto updateCategoryDto)
         {
             var value = _mapper.Map<Category>(updateCategoryDto);
-            await _categoryCollection.ReplaceOneAsync(c=>c.CategoryId == updateCategoryDto.CategoryId, value);
+            await _categoryCollection.ReplaceOneAsync(c => c.CategoryId == updateCategoryDto.CategoryId, value);
         }
     }
 }

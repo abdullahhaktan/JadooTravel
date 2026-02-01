@@ -2,7 +2,7 @@
 
 namespace JadooTravel.ViewComponents
 {
-    public class _DefaultHeadComponentPartial:ViewComponent
+    public class _DefaultHeadComponentPartial : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

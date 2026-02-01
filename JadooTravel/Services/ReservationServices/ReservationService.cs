@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
 using JadooTravel.Dtos.ReservationDtos;
-using JadooTravel.Dtos.CategoryDtos;
 using JadooTravel.Entities;
+using JadooTravel.Services.ReservationServices;
 using JadooTravel.Settings;
 using MongoDB.Driver;
-using JadooTravel.Services.ReservationServices;
 
 namespace JadooTravel.Services.ReservationService
 {

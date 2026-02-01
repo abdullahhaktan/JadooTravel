@@ -1,10 +1,9 @@
-﻿using JadooTravel.Services.DestinationServices;
-using JadooTravel.Services.Services;
+﻿using JadooTravel.Services.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JadooTravel.ViewComponents
 {
-    public class _DefaultDestinationComponentPartial: ViewComponent
+    public class _DefaultDestinationComponentPartial : ViewComponent
     {
         private readonly IDestinationService _destinationCategory;
 

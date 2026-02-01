@@ -1,7 +1,6 @@
-﻿using JadooTravel.Services.CategoryServices;
-using JadooTravel.Dtos.CategoryDtos;
+﻿using JadooTravel.Dtos.CategoryDtos;
+using JadooTravel.Services.CategoryServices;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace JadooTravel.Controllers
 {

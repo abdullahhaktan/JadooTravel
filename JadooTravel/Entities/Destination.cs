@@ -1,5 +1,5 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace JadooTravel.Entities
 {
@@ -11,8 +11,8 @@ namespace JadooTravel.Entities
         public string CityCountry { get; set; }
         public string ImageUrl { get; set; }
         public decimal Price { get; set; }
-        public string  DayNight { get; set; }
-        public int Capacity  { get; set; }
-        public string Description  { get; set; }
+        public string DayNight { get; set; }
+        public int Capacity { get; set; }
+        public string Description { get; set; }
     }
 }

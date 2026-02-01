@@ -1,8 +1,8 @@
-﻿using System.Diagnostics;
-using JadooTravel.Models;
+﻿using JadooTravel.Models;
 using JadooTravel.Services.LanguageServices;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace JadooTravel.Controllers
 {

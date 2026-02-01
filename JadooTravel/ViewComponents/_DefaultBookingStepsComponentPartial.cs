@@ -1,10 +1,9 @@
 ﻿using JadooTravel.Services.TripPlanServices;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace JadooTravel.ViewComponents
 {
-    public class _DefaultBookingStepsComponentPartial:ViewComponent
+    public class _DefaultBookingStepsComponentPartial : ViewComponent
     {
         private readonly ITripPlanService _tripPlanService;
 

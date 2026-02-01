@@ -1,7 +1,6 @@
 ﻿using JadooTravel.Dtos.TestimonialDtos;
 using JadooTravel.Services.TestimonialServices;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace JadooTravel.Controllers
 {

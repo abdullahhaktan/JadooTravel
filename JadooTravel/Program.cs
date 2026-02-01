@@ -1,5 +1,3 @@
-using JadooTravel.Models;
-using JadooTravel.Services;
 using JadooTravel.Services.CategoryServices;
 using JadooTravel.Services.DestinationServices;
 using JadooTravel.Services.FeatureServices;
@@ -17,7 +15,6 @@ using System.Reflection;
 using SharedResource = JadooTravel.Services.LanguageServices.SharedResource;
 
 var builder = WebApplication.CreateBuilder(args);
-
 
 #region Localizer
 builder.Services.AddSingleton<LanguageService>();
@@ -43,8 +40,6 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
 });
 #endregion
-
-
 
 // Diðer servisler...
 builder.Services.AddScoped<ICategoryService, CategoryService>();

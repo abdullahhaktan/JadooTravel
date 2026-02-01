@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
 using JadooTravel.Dtos.FeatureDtos;
-using JadooTravel.Dtos.FeatureDtos;
 using JadooTravel.Entities;
 using JadooTravel.Settings;
-using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 
 namespace JadooTravel.Services.FeatureServices
@@ -44,7 +42,7 @@ namespace JadooTravel.Services.FeatureServices
             else
             {
                 var value = _mapper.Map<Feature>(updateFeatureDto);
-                await _featureCollection.FindOneAndReplaceAsync(f=>f.FeatureId == updateFeatureDto.FeatureId, value);
+                await _featureCollection.FindOneAndReplaceAsync(f => f.FeatureId == updateFeatureDto.FeatureId, value);
             }
         }
     }

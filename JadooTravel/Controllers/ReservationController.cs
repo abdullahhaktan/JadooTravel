@@ -1,8 +1,6 @@
 ﻿using JadooTravel.Dtos.ReservationDtos;
-using JadooTravel.Dtos.CategoryDtos;
 using JadooTravel.Services.ReservationServices;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace JadooTravel.Controllers
 {
@@ -32,7 +30,7 @@ namespace JadooTravel.Controllers
         {
             await _catgoryservice.CreateReservationAsync(createReservationDto);
             TempData["SuccessMessage"] = "Rezervasyon başarı ile kaydedildi";
-            return RedirectToAction("Index","Default");
+            return RedirectToAction("Index", "Default");
         }
 
         [HttpGet]

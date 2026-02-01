@@ -1,10 +1,9 @@
 ﻿using JadooTravel.Services.FeatureServices;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace JadooTravel.ViewComponents
 {
-    public class _DefaultFeatureComponentPartial:ViewComponent
+    public class _DefaultFeatureComponentPartial : ViewComponent
     {
         private readonly IFeatureService _featureCategory;
 
